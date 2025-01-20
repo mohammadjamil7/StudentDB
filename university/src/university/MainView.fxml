@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="487.0" prefWidth="497.0" style="-fx-background-color: #1A1A1A;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.MainController">
+    <children>
+        <Label layoutX="114.0" layoutY="18.0" text="University Management System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+        <Label layoutX="50" layoutY="80" text="Name:" textFill="WHITE" />
+        <TextField fx:id="nameField" layoutX="150" layoutY="80" style="-fx-background-color: #333333;" />
+        
+        <Label layoutX="50" layoutY="120" text="Age:" textFill="#fbf7f7" />
+        <TextField fx:id="ageField" layoutX="150" layoutY="120" style="-fx-background-color: #333333;" />
+        
+        <Label layoutX="50" layoutY="160" text="Major:" textFill="#f2efef" />
+        <TextField fx:id="majorField" layoutX="150" layoutY="160" style="-fx-background-color: #333333;" />
+        
+        <Button layoutX="50" layoutY="200" onAction="#handleAddStudent" text="Add Student" />
+        <Button layoutX="176.0" layoutY="200.0" onAction="#handleUpdateStudent" style="-fx-background-color: #01D95A;" text="Update Student" textFill="WHITE" />
+        <Button layoutX="316.0" layoutY="200.0" onAction="#handleDeleteStudent" style="-fx-background-color: #ed2009;" text="Delete Student" textFill="WHITE" />
+        
+        <TableView fx:id="studentTable" layoutX="50" layoutY="250" onMouseClicked="#handleRowSelect" prefHeight="200" prefWidth="400">
+            <columns>
+                <TableColumn fx:id="colName" text="Name" />
+                <TableColumn fx:id="colAge" text="Age" />
+                <TableColumn fx:id="colMajor" text="Major" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

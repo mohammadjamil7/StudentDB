@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="university.jnlp">
+  <information>
+    <title>university</title>
+    <vendor>moham</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\sqlite-jdbc-3.48.0.0.jar" size="14298332" download="eager" />
+    <jar href="university.jar" size="7533" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="university.University"  name="university" />
+  <update check="always"/>
+</jnlp>
